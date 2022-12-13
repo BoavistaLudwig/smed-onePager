@@ -7,6 +7,10 @@
     <title>SMED App</title>
     <link href="./output.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="/src/favicon.ico" />
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
   </head>
   <body>
     <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
@@ -156,9 +160,13 @@
                   />
                 </div>
 
-                <div class="mt-8 flex gap-x-4 sm:justify-center">
+                <div
+                  class="mt-8 flex gap-x-4 sm:justify-center"
+                  x-data="{ modelOpen: false }"
+                >
                   <a
-                    href="#"
+                    @click="modelOpen =!modelOpen"
+                    href="#/"
                     class="inline-block rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700"
                   >
                     Get Access
@@ -166,13 +174,120 @@
                       >&rarr;</span
                     >
                   </a>
-                  <a
+                  <div
+                    x-show="modelOpen"
+                    class="fixed inset-0 z-50 overflow-y-auto"
+                    aria-labelledby="modal-title"
+                    role="dialog"
+                    aria-modal="true"
+                  >
+                    <div
+                      class="flex items-end justify-center min-h-screen px-4 text-center md:items-center sm:block sm:p-0"
+                    >
+                      <div
+                        x-cloak
+                        @click="modelOpen = false"
+                        x-show="modelOpen"
+                        x-transition:enter="transition ease-out duration-300 transform"
+                        x-transition:enter-start="opacity-0"
+                        x-transition:enter-end="opacity-100"
+                        x-transition:leave="transition ease-in duration-200 transform"
+                        x-transition:leave-start="opacity-100"
+                        x-transition:leave-end="opacity-0"
+                        class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-40"
+                        aria-hidden="true"
+                      ></div>
+
+                      <div
+                        x-cloak
+                        x-show="modelOpen"
+                        x-transition:enter="transition ease-out duration-300 transform"
+                        x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                        x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                        x-transition:leave="transition ease-in duration-200 transform"
+                        x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+                        x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                        class="inline-block w-full max-w-xl p-8 my-20 overflow-hidden text-left transition-all transform bg-white rounded-lg shadow-xl 2xl:max-w-2xl"
+                      >
+                        <div
+                          class="flex items-center justify-between space-x-4"
+                        >
+                          <h1 class="text-xl font-medium text-gray-800">
+                            Apply for early access
+                          </h1>
+
+                          <button
+                            @click="modelOpen = false"
+                            class="text-gray-600 focus:outline-none hover:text-gray-700"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="w-6 h-6"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+
+                        <p class="mt-2 text-sm text-gray-500">
+                          We are happy to involve you and your ideas during this
+                          early beta stage of the SMED app.
+                        </p>
+
+                        <form class="mt-5">
+                          <div>
+                            <label
+                              for="user name"
+                              class="block text-sm text-gray-700 capitalize dark:text-gray-200"
+                              >Your name</label
+                            >
+                            <input
+                              placeholder="Your Name"
+                              type="text"
+                              class="block w-full px-3 py-2 mt-2 text-gray-600 placeholder-gray-400 bg-white border border-gray-200 rounded-md focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-40"
+                            />
+                          </div>
+
+                          <div class="mt-4">
+                            <label
+                              for="email"
+                              class="block text-sm text-gray-700 capitalize dark:text-gray-200"
+                              >Your Email</label
+                            >
+                            <input
+                              placeholder="max.mustermann@emailapp.com"
+                              type="email"
+                              class="block w-full px-3 py-2 mt-2 text-gray-600 placeholder-gray-400 bg-white border border-gray-200 rounded-md focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-40"
+                            />
+                          </div>
+
+                          <div class="flex justify-end mt-6">
+                            <button
+                              type="button"
+                              class="px-3 py-2 text-sm tracking-wide text-white capitalize transition-colors duration-200 transform bg-indigo-500 rounded-md dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:bg-indigo-700 hover:bg-indigo-600 focus:outline-none focus:bg-indigo-500 focus:ring focus:ring-indigo-300 focus:ring-opacity-50"
+                            >
+                              Send
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <a
                     href="#"
                     class="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
                   >
                     Contact Us
                     <span class="text-gray-400" aria-hidden="true">&rarr;</span>
-                  </a>
+                  </a> -->
                 </div>
               </div>
               <div
@@ -209,5 +324,29 @@
         </div>
       </main>
     </div>
+    <!-- component -->
+
+    <footer
+      class="p-4 md:flex md:items-center md:justify-between md:p-6 w-9/12 justify-center mx-auto"
+    >
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+        >© 2022
+        <a href="https://smedapp.com" class="hover:underline">Boavista Coding</a
+        >. All Rights Reserved.
+      </span>
+      <ul
+        class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
+      >
+        <!--    <li>
+          <a href="#" class="mr-4 hover:underline md:mr-6">About</a>
+        </li> -->
+        <li>
+          <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="#" class="hover:underline">Contact</a>
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>
