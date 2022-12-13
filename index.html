@@ -170,9 +170,7 @@
                     class="inline-block rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700"
                   >
                     Get Access
-                    <span class="text-indigo-200" aria-hidden="true"
-                      >&rarr;</span
-                    >
+                    <span class="text-indigo-200" aria-hidden="true"></span>
                   </a>
                   <div
                     x-show="modelOpen"
@@ -237,13 +235,13 @@
                           </button>
                         </div>
 
-                        <p class="mt-2 text-sm text-gray-500">
-                          We are happy to involve you and your ideas during this
-                          early beta stage of the SMED app.
-                        </p>
+                        <form x-data="contactForm()" @submit.prevent="submit">
+                          <p class="mt-2 text-sm text-gray-500">
+                            We are happy to involve you and your ideas during
+                            this early beta stage of the SMED app.
+                          </p>
 
-                        <form class="mt-5">
-                          <div>
+                          <div class="mt-4">
                             <label
                               for="user name"
                               class="block text-sm text-gray-700 capitalize dark:text-gray-200"
@@ -253,6 +251,7 @@
                               placeholder="Your Name"
                               type="text"
                               class="block w-full px-3 py-2 mt-2 text-gray-600 placeholder-gray-400 bg-white border border-gray-200 rounded-md focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-40"
+                              x-model="data.name"
                             />
                           </div>
 
@@ -265,29 +264,30 @@
                             <input
                               placeholder="max.mustermann@emailapp.com"
                               type="email"
+                              required
+                              x-model="data.email"
                               class="block w-full px-3 py-2 mt-2 text-gray-600 placeholder-gray-400 bg-white border border-gray-200 rounded-md focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-40"
                             />
                           </div>
 
                           <div class="flex justify-end mt-6">
                             <button
-                              type="button"
+                              type="submit"
+                              x-text="buttonText"
+                              :disabled="loading"
+                              :disabled="loading"
+                              x-text="buttonText"
                               class="px-3 py-2 text-sm tracking-wide text-white capitalize transition-colors duration-200 transform bg-indigo-500 rounded-md dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:bg-indigo-700 hover:bg-indigo-600 focus:outline-none focus:bg-indigo-500 focus:ring focus:ring-indigo-300 focus:ring-opacity-50"
                             >
-                              Send
+                              Submit
                             </button>
                           </div>
+
+                          <!--  <div x-text="formMessage"></div> -->
                         </form>
                       </div>
                     </div>
                   </div>
-                  <!-- <a
-                    href="#"
-                    class="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
-                  >
-                    Contact Us
-                    <span class="text-gray-400" aria-hidden="true">&rarr;</span>
-                  </a> -->
                 </div>
               </div>
               <div
@@ -337,9 +337,6 @@
       <ul
         class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
       >
-        <!--    <li>
-          <a href="#" class="mr-4 hover:underline md:mr-6">About</a>
-        </li> -->
         <li>
           <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
         </li>
@@ -349,4 +346,41 @@
       </ul>
     </footer>
   </body>
+  <script>
+    const FORMSPARK_ACTION_URL = "https://submit-form.com/Dfa7enTy";
+    function contactForm() {
+      return {
+        data: {
+          name: "",
+          email: "",
+        },
+        buttonText: "Submit",
+        loading: false,
+        submit() {
+          this.buttonText = "Submitting...";
+          this.loading = true;
+          fetch(FORMSPARK_ACTION_URL, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify(this.data),
+          })
+            .then(() => {
+              this.formMessage = "Form successfully submitted.";
+            })
+            .catch(() => {
+              this.formMessage = "Something went wrong.";
+            })
+            .finally(() => {
+              this.data.email = "";
+              this.data.name = "";
+              this.buttonText = "Submit";
+              this.loading = false;
+            });
+        },
+      };
+    }
+  </script>
 </html>
