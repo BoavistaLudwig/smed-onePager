@@ -28,53 +28,7 @@
             >SMED App</span
           >
         </a>
-        <div class="flex items-center lg:order-2">
-          <a href="""
-            href="https://www.smedapp.com" class="text-gray-800 dark:text-white
-            hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium
-            rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2
-            dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
-            >Try now!</a
-          >
-          <!--      <a
-            href="#"
-            class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
-            >Get started</a
-          > -->
-          <!--           <button
-            data-collapse-toggle="mobile-menu-2"
-            type="button"
-            class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="mobile-menu-2"
-            aria-expanded="false"
-          > -->
-          <!-- <span class="sr-only">Open main menu</span>
-            <svg
-              class="w-6 h-6"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-            <svg
-              class="hidden w-6 h-6"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </button> -->
-        </div>
+        <div class="flex items-center lg:order-2"></div>
         <div
           class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
           id="mobile-menu-2"
@@ -82,7 +36,6 @@
       </div>
     </nav>
 
-    <!-- This example requires Tailwind CSS v3.0+ -->
     <div class="isolate bg-white">
       <div
         class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
@@ -124,10 +77,8 @@
                 >
                   <span class="text-gray-600">
                     Our app is available for testing!
-                    <a href="#" class="font-semibold text-indigo-600"
-                      ><span class="absolute inset-0" aria-hidden="true"><!-- </span
-                      >Apply for access
-                      <span aria-hidden="true">&rarr;</span> --></a
+                    <span href="#/" class="text-indigo-600"
+                      >Apply for access</span
                     >
                   </span>
                 </div>
@@ -144,22 +95,12 @@
                   iPhone.
                 </p>
 
-                <div class="flex flex-row w-full space-x-4 justify-center">
-                  <img
-                    src="/src/mockup1.png"
-                    alt="mockup"
-                    class="w-1/2 flex justify-center"
-                  />
-                  <img
-                    src="/src/mockup2.png"
-                    alt="mockup"
-                    class="w-1/2 flex justify-center"
-                  />
-                  <img
-                    src="/src/mockup3.png"
-                    alt="mockup"
-                    class="w-1/2 flex justify-center"
-                  />
+                <div
+                  class="flex flex-row w-full justify-center overflow-hidden md:overflow-visible"
+                >
+                  <img src="/src/mockup1.png" alt="mockup" class="w-96" />
+                  <img src="/src/mockup2.png" alt="mockup" class="w-96" />
+                  <img src="/src/mockup3.png" alt="mockup" class="w-96" />
                 </div>
 
                 <div
@@ -271,14 +212,8 @@
                               class="block w-full px-3 py-2 mt-2 text-gray-600 placeholder-gray-400 bg-white border border-gray-200 rounded-md focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-40"
                             />
                           </div>
-                          <!--  <div x-text="formMessage">
-                            <label
-                              for="formMessage"
-                              class="block text-sm text-gray-700 capitalize dark:text-gray-200"
-                            ></label>
-                          </div> -->
 
-                          <div class="flex justify-end mt-6">
+                          <div class="flex justify-end mt-6" id="submitBtn">
                             <button
                               type="submit"
                               x-text="buttonText"
@@ -330,10 +265,9 @@
         </div>
       </main>
     </div>
-    <!-- component -->
 
     <footer
-      class="p-4 md:flex md:items-center md:justify-between md:p-6 w-9/12 justify-center mx-auto"
+      class="p-6 mx-auto md:flex md:items-center md:justify-between md:pt-60 w-9/12"
     >
       <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
         >© 2022
@@ -342,12 +276,112 @@
       </span>
       <ul
         class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
+        x-data="{ model2Open: false }"
       >
         <li>
-          <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+          <a
+            @click="model2Open =!model2Open"
+            href="#/"
+            class="mr-4 hover:underline md:mr-6"
+            >Privacy Policy</a
+          >
+
+          <div
+            <div
+            x-show="model2Open"
+            class="fixed inset-0 z-50 overflow-y-auto"
+            aria-labelledby="modal-title"
+            role="dialog"
+            aria-modal="true"
+          >
+            <div
+              class="flex items-end justify-center min-h-screen px-4 text-center md:items-center sm:block sm:p-0"
+            >
+              <div>
+                <div
+                  x-cloak
+                  @click="model2Open = false"
+                  x-show="model2Open"
+                  x-transition:enter="transition ease-out duration-300 transform"
+                  x-transition:enter-start="opacity-0"
+                  x-transition:enter-end="opacity-100"
+                  x-transition:leave="transition ease-in duration-200 transform"
+                  x-transition:leave-start="opacity-100"
+                  x-transition:leave-end="opacity-0"
+                  class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-40"
+                  aria-hidden="true"
+                ></div>
+
+                <div
+                  x-cloak
+                  x-show="model2Open"
+                  x-transition:enter="transition ease-out duration-300 transform"
+                  x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                  x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                  x-transition:leave="transition ease-in duration-200 transform"
+                  x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+                  x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                  class="inline-block w-full max-w-xl p-8 my-20 overflow-hidden text-left transition-all transform bg-white rounded-lg shadow-xl 2xl:max-w-2xl"
+                >
+                  <div
+                    class="flex flex-col items-center justify-between space-x-4"
+                  >
+                    <h1 class="text-xl font-medium text-gray-800">
+                      Privacy Policy
+                    </h1>
+                    <h2>
+                      Effective Date: 10.12.2022 www.smedapp.com (“us”, “we”, or
+                      “our”) operates the www.smedapp.com website (hereinafter
+                      referred to as the “Service”). We respect your privacy and
+                      are committed to protecting your personal information.
+                      This privacy policy outlines the types of personal
+                      information we collect and how we use, share, and protect
+                      that information. By using our Service, you agree to the
+                      collection and use of your personal information as
+                      described in this privacy policy. Information We Collect
+                      We may collect personal information such as your name,
+                      email address, and phone number when you provide it to us
+                      through forms on our website or through other interactions
+                      with our Service. We may also collect information about
+                      your use of our Service, including pages visited and
+                      actions taken, through the use of cookies and other
+                      tracking technologies. Use of Collected Information We may
+                      use the personal information we collect to communicate
+                      with you, to provide and improve our Service, and for
+                      internal business purposes such as data analysis and
+                      record keeping. We may also use your personal information
+                      to send you marketing materials or other communications
+                      about our products or services. You can opt out of
+                      receiving these communications at any time by following
+                      the unsubscribe instructions included in the
+                      communication. Sharing of Collected Information We may
+                      share your personal information with third parties for the
+                      purposes of providing and improving our Service, and for
+                      business purposes such as data analysis. We may also share
+                      your personal information as required by law or to protect
+                      the rights and safety of ourselves and others. Protection
+                      of Collected Information We take appropriate measures to
+                      protect your personal information from unauthorized
+                      access, use, or disclosure. However, no method of
+                      transmission over the internet or method of electronic
+                      storage is completely secure, and we cannot guarantee the
+                      absolute security of your personal information. Changes to
+                      this Privacy Policy We may update our privacy policy from
+                      time to time. We will post any changes on this page and
+                      encourage you to review our privacy policy regularly.
+                      Contact Us If you have any questions or concerns about our
+                      privacy policy or the handling of your personal
+                      information, please contact us through our Twitter
+                      account.
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </li>
         <li>
-          <a href="#" class="hover:underline">Contact</a>
+          <a href="#submitBtn" class="hover:underline">Contact</a>
         </li>
       </ul>
     </footer>
