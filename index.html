@@ -13,14 +13,14 @@
     ></script>
   </head>
   <body>
-    <nav class="border-gray-200 bg-white px-4 py-2.5 dark:bg-gray-800 lg:px-6">
+    <nav class="border-gray-200 bg-white px-4 py-2.5 lg:px-6">
       <div
         class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between"
       >
         <a href="https://www.smedapp.com" class="flex items-center">
           <img
             src="/src/images/logo.png"
-            class="mr-3 h-6 sm:h-9"
+            class="mr-3 h-12 sm:h-16"
             alt="SMED App Logo"
           />
           <span
@@ -38,6 +38,7 @@
 
     <div class="isolate bg-white">
       <div
+        id="bgShadow"
         class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
       >
         <svg
@@ -79,7 +80,7 @@
                   class="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
                 >
                   <span class="text-gray-600">
-                    Our app is available for testing!
+                    Our app is available for testing! <span> 🥳 </span>
                     <span href="#/" class="text-indigo-600"
                       >Apply for access</span
                     >
@@ -88,15 +89,20 @@
               </div>
 
               <div>
-                <h1
-                  class="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl"
-                >
-                  When minutes matter, better use SMED
-                </h1>
-                <p class="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
-                  Now anyone in your team, can apply the powerful SMED
-                  methodology, at any time, from their elegant iPhone.
-                </p>
+                <div class="pb-4">
+                  <h1
+                    class="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl"
+                  >
+                    When minutes matter, better use SMED
+                  </h1>
+                  <p
+                    class="mt-6 text-lg leading-8 text-gray-600 sm:text-center"
+                  >
+                    SMED is one tool from Lean Management and used to reduce the
+                    amount of time it takes to change from one process to
+                    running another.
+                  </p>
+                </div>
 
                 <div
                   class="flex w-full flex-row justify-center overflow-hidden md:overflow-visible"
@@ -134,8 +140,8 @@
                 A better way to apply SMED
               </p>
               <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">
-                Usually you might use a piece of paper and a stopwatch to apply
-                SMED. With the SMED app you can do it in a more efficient way.
+                Thanks to the SMED app you can now apply the SMED methodology to
+                any process, at any time, from your iPhone.
               </p>
             </div>
 
@@ -204,8 +210,7 @@
                     </p>
                     <p class="mt-2 text-base leading-7 text-gray-600">
                       Apply any of the existing templates or create your own to
-                      a) save time with documenting or b) narrow down its focus
-                      while recording times
+                      save time with labeling while recording times
                     </p>
                   </div>
                 </div>
@@ -242,8 +247,8 @@
                       Analyze
                     </p>
                     <p class="mt-2 text-base leading-7 text-gray-600">
-                      Review your recorded session to externalize those steps
-                      you deem external to the recorded circumstance
+                      Review your recorded session and externalize those steps
+                      you deem external to the ideal process
                     </p>
                   </div>
                 </div>
@@ -275,8 +280,8 @@
                       Reports
                     </p>
                     <p class="mt-2 text-base leading-7 text-gray-600">
-                      Receive a detailed report with multiple metrics of your
-                      recorded session (soon shareable)
+                      Receive detailed reports with multiple metrics for every
+                      recorded session (soon these will be shareable)
                     </p>
                   </div>
                 </div>
@@ -307,8 +312,8 @@
                       Dashboard
                     </p>
                     <p class="mt-2 text-base leading-7 text-gray-600">
-                      View your 90 days activity and global metrics to your
-                      account
+                      Keep track of your activity and global metrics in your
+                      personal dashboard
                     </p>
                   </div>
                 </div>
@@ -350,131 +355,146 @@
           </div>
         </div>
 
-        <div
-          id="sectionContainer"
-          class="p-4"
-          >
-          <div
-          class="mt-8 flex gap-x-4 sm:justify-center"
-          x-data="{ modelOpen: false }"
-        >
-          <a
-            @click="modelOpen =!modelOpen"
-            href="#/"
-            class="inline-block rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700"
-          >
-            Get Access
-            <span class="text-indigo-200" aria-hidden="true"></span>
-          </a>
-          <div
-            x-show="modelOpen"
-            class="fixed inset-0 z-50 overflow-y-auto"
-            aria-labelledby="modal-title"
-            role="dialog"
-            aria-modal="true"
-          >
-            <div
-              class="flex min-h-screen items-end justify-center px-4 text-center sm:block sm:p-0 md:items-center"
-            >
-              <div
-                x-cloak
-                @click="modelOpen = false"
-                x-show="modelOpen"
-                x-transition:enter="transition ease-out duration-300 transform"
-                x-transition:enter-start="opacity-0"
-                x-transition:enter-end="opacity-100"
-                x-transition:leave="transition ease-in duration-200 transform"
-                x-transition:leave-start="opacity-100"
-                x-transition:leave-end="opacity-0"
-                class="fixed inset-0 bg-gray-500 bg-opacity-40 transition-opacity"
-                aria-hidden="true"
-              ></div>
-
-              <div
-                x-cloak
-                x-show="modelOpen"
-                x-transition:enter="transition ease-out duration-300 transform"
-                x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
-                x-transition:leave="transition ease-in duration-200 transform"
-                x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
-                x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                class="my-20 inline-block w-full max-w-xl transform overflow-hidden rounded-lg bg-white p-8 text-left shadow-xl transition-all 2xl:max-w-2xl"
+        <div id="sectionContainer" class="p-4">
+          <div class="mx-auto max-w-6xl px-6 lg:px-8">
+            <div class="sm:text-center">
+              <h2 class="text-lg font-semibold leading-8 text-indigo-600">
+                SMED App
+              </h2>
+              <p
+                class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
               >
-                <div class="flex items-center justify-between space-x-4">
-                  <h1 class="text-xl font-medium text-gray-800">
-                    Apply for early access
-                  </h1>
-
-                  <button
+                Join the private beta
+              </p>
+              <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">
+                This iPhone app is currently in private beta. If you want to be
+                part of this trial phase, please click the button, fill out the
+                form and we will send you an invite.
+              </p>
+            </div>
+            <div
+              class="mt-8 flex gap-x-4 sm:justify-center"
+              x-data="{ modelOpen: false }"
+            >
+              <a
+                @click="modelOpen =!modelOpen"
+                href="#/"
+                class="inline-block rounded-lg bg-indigo-700 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-600 hover:ring-indigo-700"
+              >
+                Get Access
+                <span class="text-indigo-200" aria-hidden="true"></span>
+              </a>
+              <div
+                x-show="modelOpen"
+                class="fixed inset-0 z-50 overflow-y-auto"
+                aria-labelledby="modal-title"
+                role="dialog"
+                aria-modal="true"
+              >
+                <div
+                  class="flex min-h-screen items-end justify-center px-4 text-center sm:block sm:p-0 md:items-center"
+                >
+                  <div
+                    x-cloak
                     @click="modelOpen = false"
-                    class="text-gray-600 hover:text-gray-700 focus:outline-none"
+                    x-show="modelOpen"
+                    x-transition:enter="transition ease-out duration-300 transform"
+                    x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100"
+                    x-transition:leave="transition ease-in duration-200 transform"
+                    x-transition:leave-start="opacity-100"
+                    x-transition:leave-end="opacity-0"
+                    class="fixed inset-0 bg-gray-500 bg-opacity-40 transition-opacity"
+                    aria-hidden="true"
+                  ></div>
+
+                  <div
+                    x-cloak
+                    x-show="modelOpen"
+                    x-transition:enter="transition ease-out duration-300 transform"
+                    x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                    x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                    x-transition:leave="transition ease-in duration-200 transform"
+                    x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+                    x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                    class="my-20 inline-block w-full max-w-xl transform overflow-hidden rounded-lg bg-white p-8 text-left shadow-xl transition-all 2xl:max-w-2xl"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                  </button>
+                    <div class="flex items-center justify-between space-x-4">
+                      <h1 class="text-xl font-medium text-gray-800">
+                        Apply for early access
+                      </h1>
+
+                      <button
+                        @click="modelOpen = false"
+                        class="text-gray-600 hover:text-gray-700 focus:outline-none"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-6 w-6"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+
+                    <form x-data="contactForm()" @submit.prevent="submit">
+                      <p class="mt-2 text-sm text-gray-500">
+                        We are happy to involve you and your ideas during this
+                        early beta stage of the SMED app.
+                      </p>
+
+                      <div class="mt-4">
+                        <label
+                          for="user name"
+                          class="block text-sm capitalize text-gray-700 dark:text-gray-200"
+                          >Name</label
+                        >
+                        <input
+                          placeholder="Your Name"
+                          type="text"
+                          class="mt-2 block w-full rounded-md border border-gray-200 bg-white px-3 py-2 text-gray-600 placeholder-gray-400 focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-40"
+                          x-model="data.name"
+                        />
+                      </div>
+
+                      <div class="mt-4">
+                        <label
+                          for="email"
+                          class="block text-sm capitalize text-gray-700 dark:text-gray-200"
+                          >Email</label
+                        >
+                        <input
+                          placeholder="max.mustermann@emailapp.com"
+                          type="email"
+                          required
+                          x-model="data.email"
+                          class="mt-2 block w-full rounded-md border border-gray-200 bg-white px-3 py-2 text-gray-600 placeholder-gray-400 focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-40"
+                        />
+                      </div>
+
+                      <div class="mt-6 flex justify-end" id="submitBtn">
+                        <button
+                          type="submit"
+                          x-text="buttonText"
+                          :disabled="loading"
+                          :disabled="loading"
+                          x-text="buttonText"
+                          class="transform rounded-md bg-indigo-500 px-3 py-2 text-sm capitalize tracking-wide text-white transition-colors duration-200 hover:bg-indigo-600 focus:bg-indigo-500 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-50 dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:bg-indigo-700"
+                        >
+                          Submit
+                        </button>
+                      </div>
+                    </form>
+                  </div>
                 </div>
-
-                <form x-data="contactForm()" @submit.prevent="submit">
-                  <p class="mt-2 text-sm text-gray-500">
-                    We are happy to involve you and your ideas during this early
-                    beta stage of the SMED app.
-                  </p>
-
-                  <div class="mt-4">
-                    <label
-                      for="user name"
-                      class="block text-sm capitalize text-gray-700 dark:text-gray-200"
-                      >Name</label
-                    >
-                    <input
-                      placeholder="Your Name"
-                      type="text"
-                      class="mt-2 block w-full rounded-md border border-gray-200 bg-white px-3 py-2 text-gray-600 placeholder-gray-400 focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-40"
-                      x-model="data.name"
-                    />
-                  </div>
-
-                  <div class="mt-4">
-                    <label
-                      for="email"
-                      class="block text-sm capitalize text-gray-700 dark:text-gray-200"
-                      >Email</label
-                    >
-                    <input
-                      placeholder="max.mustermann@emailapp.com"
-                      type="email"
-                      required
-                      x-model="data.email"
-                      class="mt-2 block w-full rounded-md border border-gray-200 bg-white px-3 py-2 text-gray-600 placeholder-gray-400 focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-40"
-                    />
-                  </div>
-
-                  <div class="mt-6 flex justify-end" id="submitBtn">
-                    <button
-                      type="submit"
-                      x-text="buttonText"
-                      :disabled="loading"
-                      :disabled="loading"
-                      x-text="buttonText"
-                      class="transform rounded-md bg-indigo-500 px-3 py-2 text-sm capitalize tracking-wide text-white transition-colors duration-200 hover:bg-indigo-600 focus:bg-indigo-500 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-50 dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:bg-indigo-700"
-                    >
-                      Submit
-                    </button>
-                  </div>
-                </form>
               </div>
             </div>
           </div>
