@@ -671,6 +671,26 @@ video {
   right: 0px;
 }
 
+.left-80 {
+  left: 20rem;
+}
+
+.left-24 {
+  left: 6rem;
+}
+
+.left-\[50\%\] {
+  left: 50%;
+}
+
+.left-\[48\%\] {
+  left: 48%;
+}
+
+.left-\[46\%\] {
+  left: 46%;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -765,6 +785,26 @@ video {
   height: 20rem;
 }
 
+.h-\[10rem\] {
+  height: 10rem;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
+.h-40 {
+  height: 10rem;
+}
+
+.h-80 {
+  height: 20rem;
+}
+
+.h-60 {
+  height: 15rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -787,6 +827,14 @@ video {
 
 .w-8 {
   width: 2rem;
+}
+
+.w-80 {
+  width: 20rem;
+}
+
+.w-60 {
+  width: 15rem;
 }
 
 .max-w-screen-xl {
@@ -863,6 +911,10 @@ video {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.content-center {
+  align-content: center;
 }
 
 .items-end {
@@ -1238,6 +1290,11 @@ video {
 
 .blur-3xl {
   --tw-blur: blur(64px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.blur-2xl {
+  --tw-blur: blur(40px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
