@@ -547,6 +547,10 @@ video {
   }
 }
 
+.visible {
+  visibility: visible;
+}
+
 .fixed {
   position: fixed;
 }
@@ -1334,14 +1338,6 @@ video {
 
   .md\:flex {
     display: flex;
-  }
-
-  .md\:h-60 {
-    height: 15rem;
-  }
-
-  .md\:w-60 {
-    width: 15rem;
   }
 
   .md\:w-9\/12 {
