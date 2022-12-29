@@ -31,7 +31,7 @@
       <div
         class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between"
       >
-        <a href="https://www.smedapp.com" class="flex items-center">
+        <a href="https://smedapp.com" class="flex items-center">
           <img
             src="/src/images/logo.png"
             class="mr-3 h-12 sm:h-16"
@@ -83,7 +83,7 @@
       </div>
 
       <main>
-        <div id="sectionContainer" class="py-24 sm:py-32 lg:py-40">
+        <div id="sectionContainer" class="py-12 sm:py-12 lg:py-12">
           <div class="mx-auto max-w-3xl pt-4 sm:pt-4 sm:pb-4">
             <div>
               <div
@@ -550,110 +550,21 @@
       </span>
       <ul
         class="mt-3 flex flex-wrap items-center text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
-        x-data="{ model2Open: false }"
       >
         <li>
           <a
-            @click="model2Open =!model2Open"
-            href="#/"
+            href="https://smedapp.com/privacy"
             class="mr-4 hover:underline md:mr-6"
             >Privacy Policy</a
           >
-
-          <div
-            x-show="model2Open"
-            class="fixed inset-0 z-50 overflow-y-auto"
-            aria-labelledby="modal-title"
-            role="dialog"
-            aria-modal="true"
-          >
-            <div
-              class="flex min-h-screen items-end justify-center px-4 text-center sm:block sm:p-0 md:items-center"
-            >
-              <div>
-                <div
-                  x-cloak
-                  @click="model2Open = false"
-                  x-show="model2Open"
-                  x-transition:enter="transition ease-out duration-300 transform"
-                  x-transition:enter-start="opacity-0"
-                  x-transition:enter-end="opacity-100"
-                  x-transition:leave="transition ease-in duration-200 transform"
-                  x-transition:leave-start="opacity-100"
-                  x-transition:leave-end="opacity-0"
-                  class="fixed inset-0 bg-gray-500 bg-opacity-40 transition-opacity"
-                  aria-hidden="true"
-                ></div>
-
-                <div
-                  x-cloak
-                  x-show="model2Open"
-                  x-transition:enter="transition ease-out duration-300 transform"
-                  x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                  x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
-                  x-transition:leave="transition ease-in duration-200 transform"
-                  x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
-                  x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                  class="my-20 inline-block w-full max-w-xl transform overflow-hidden rounded-lg bg-white p-8 text-left shadow-xl transition-all 2xl:max-w-2xl"
-                >
-                  <div
-                    class="flex flex-col items-center justify-between space-x-4"
-                  >
-                    <h1 class="text-xl font-medium text-gray-800">
-                      Privacy Policy
-                    </h1>
-                    <h2>
-                      Effective Date: 10.12.2022 www.smedapp.com (“us”, “we”, or
-                      “our”) operates the www.smedapp.com website (hereinafter
-                      referred to as the “Service”). We respect your privacy and
-                      are committed to protecting your personal information.
-                      This privacy policy outlines the types of personal
-                      information we collect and how we use, share, and protect
-                      that information. By using our Service, you agree to the
-                      collection and use of your personal information as
-                      described in this privacy policy. Information We Collect
-                      We may collect personal information such as your name,
-                      email address, and phone number when you provide it to us
-                      through forms on our website or through other interactions
-                      with our Service. We may also collect information about
-                      your use of our Service, including pages visited and
-                      actions taken, through the use of cookies and other
-                      tracking technologies. Use of Collected Information We may
-                      use the personal information we collect to communicate
-                      with you, to provide and improve our Service, and for
-                      internal business purposes such as data analysis and
-                      record keeping. We may also use your personal information
-                      to send you marketing materials or other communications
-                      about our products or services. You can opt out of
-                      receiving these communications at any time by following
-                      the unsubscribe instructions included in the
-                      communication. Sharing of Collected Information We may
-                      share your personal information with third parties for the
-                      purposes of providing and improving our Service, and for
-                      business purposes such as data analysis. We may also share
-                      your personal information as required by law or to protect
-                      the rights and safety of ourselves and others. Protection
-                      of Collected Information We take appropriate measures to
-                      protect your personal information from unauthorized
-                      access, use, or disclosure. However, no method of
-                      transmission over the internet or method of electronic
-                      storage is completely secure, and we cannot guarantee the
-                      absolute security of your personal information. Changes to
-                      this Privacy Policy We may update our privacy policy from
-                      time to time. We will post any changes on this page and
-                      encourage you to review our privacy policy regularly.
-                      Contact Us If you have any questions or concerns about our
-                      privacy policy or the handling of your personal
-                      information, please contact us through our Twitter
-                      account.
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </li>
-
+        <li>
+          <a
+            href="https://smedapp.com/contact"
+            class="mr-4 hover:underline md:mr-6"
+            >Contact</a
+          >
+        </li>
         <li>
           <a
             href="https://www.twitter.com/BetterUseSMED"

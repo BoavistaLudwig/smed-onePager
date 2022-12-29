@@ -917,6 +917,11 @@ video {
   padding-right: 0.75rem;
 }
 
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 .pt-4 {
   padding-top: 1rem;
 }
@@ -1308,6 +1313,11 @@ video {
     padding-bottom: 8rem;
   }
 
+  .sm\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
   .sm\:pt-4 {
     padding-top: 1rem;
   }
@@ -1416,6 +1426,11 @@ video {
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .lg\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 }
 
